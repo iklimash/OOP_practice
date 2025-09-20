@@ -1,9 +1,11 @@
-#include <iostream>
 
-using namespace std;
+#include "application.h"
+
 
 int main()
 {
-    cout << "Hello wold";
-    return 0;
+    Application a;
+
+    return a.exec();
 }
+
