@@ -21,57 +21,57 @@ int Application::exec() {
         switch (choice)
         {
         case 1:
-            cout << "Введите длинну массива:\n" << "> ";
+            cout << "Enter length array:\n" << "> ";
             cin >> len;
             array = new Array(len);
-            cout << "Массив из " << len << " элементов успешно создан\n";
+            cout << "Array " << len << " elements has been created \n";
             break;
         case 2:
-            cout << "Введите " << array->getLength() << " элементов:\n";
+            cout << "Enter " << array->getLength() << " elements:\n";
             array->insertValue();
-            cout << "Массив заполнен\n";
+            cout << "Array is full\n";
             break;
 
         case 3:
-            cout << "Введите новую длинну: "; cin >> newLen;
+            cout << "Enter new length: "; cin >> newLen;
             array->resize(newLen);
             break;
 
         case 4:
-            cout << "Массив: ";
+            cout << "Array: ";
             array->printArray();
             cout << "\n";
             break;
         case 5:
-            cout << "Среднее значение: " << array->avgValue() << "\n";
+            cout << "Average value: " << array->avgValue() << "\n";
             break;
         case 6:
-            cout << "CKO равно: " << array->CKO() << "\n";
+            cout << "CKO equally: " << array->CKO() << "\n";
             break;
         case 7:
             array->insertionSortASC();
-            cout << "Массив отсортирован по возрастанию\n";
+            cout << "Array is sorted in ascending order\n";
             break;
         case 8:
             array->insertionSortDESC();
-            cout << "Массив отсортирован по убыванию\n";
+            cout << "Array is sorted in descending order\n";
             break;
         case 9:
-            cout << "Введите index и value\n>"; cin >> index; cin >> value;
+            cout << "Enter index and value\n>"; cin >> index; cin >> value;
             if (array->changeValue(index, value))
             {
-                cout << "Элемент успешно изменен\n";
+                cout << "Element be changed\n";
             }
             else
             {
-                cout << "Ошибка изменения элемента\n";
+                cout << "Error change element\n";
             }
             break;
         case 0:
             delete array;
             return 0;
         default:
-            cout << "Неверный номер\n";
+            cout << "Error number\n";
             break;
         }
     }
@@ -82,14 +82,14 @@ void Application::showMenu()
 {
     setlocale(0, "");
 
-    cout << "1 - Создать массив\n"; /*выполнено*/
-    cout << "2 - Заполнить массив\n"; /*выполнено*/
-    cout << "3 - Изменить размерность массива\n"; /*выполнено*/
-    cout << "4 - Вывести элементы массива\n"; /*выполнено*/
-    cout << "5 - Посчитать среднее\n"; /*выполнено*/
-    cout << "6 - Посчитать СКО\n"; /*выполнено*/
-    cout << "7 - Отсортировать по возрастанию\n";/*выполнено*/
-    cout << "8 - Отсортировать по убыванию\n";/*выполнено*/
-    cout << "9 - Изменить элемент\n";/*выполнено*/
-    cout << "0 - exit\n" << "> ";/*выполнено*/
+    cout << "1 - Create array\n";
+    cout << "2 - Fill array\n";
+    cout << "3 - Change array size\n";
+    cout << "4 - Print array elements\n";
+    cout << "5 - Calculate average\n";
+    cout << "6 - Calculate CKO\n";
+    cout << "7 - Sort in ascending order\n";
+    cout << "8 - Sort in descending order\n";
+    cout << "9 - Change element\n";
+    cout << "0 - Exit\n" << "> ";
 }
