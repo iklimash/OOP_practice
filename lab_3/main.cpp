@@ -1,11 +1,11 @@
-﻿
+
 #include "application.h"
 
 
 int main()
 {
     Application a;
-
-    return a.exec();
+    a.mainMenu();
+    return 0;
 }
 
