@@ -212,7 +212,7 @@ int Application::appPolinom()
             int point;
             cout << "Input point please: ";
             cin >> point;
-            cout << 'P' << '(' << point << ')' << polinom->valueInPoint(point);
+            cout << 'P' << '(' << point << ')' << " = " << polinom->valueInPoint(point) << endl;
             break;
 
         case 5:
